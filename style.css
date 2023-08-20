@@ -1,0 +1,454 @@
+/* Estilos CSS para la página */
+:root {
+  --facebook: #3b5999; 
+  --instagram: #e4405f;
+  --twitter: #55acee;
+}
+
+header{
+  display: flex;
+  min-height: 25px;
+  background: #312bd9;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 7px 5px 0 rgb(61, 56, 56);
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  height: 100px;
+  margin-right: 10px;
+}
+
+@media (max-widht:700px){
+  header{
+    flex-direction: column;
+  }
+}
+
+nav{
+    padding: 10px 0px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+nav a{
+  font-weight: 600;
+  padding-left: 10px;
+  align-items: center;
+  font-size: 1.5vw;
+}
+
+nav a:hover {
+    color: white;
+
+}
+body{
+  font-family: 'Times New Roman', Times, serif;
+  background: #577ef2;
+  color: #e8e8e8;
+  margin: 0;
+}
+
+.img-pc{
+  width: 150px;
+  margin-block-end: 8px;
+}
+
+h2 {
+  color: #e8e8e8;
+}
+
+
+.redes-container{
+  display: flex;
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.redes-container ul li {
+  display: inline-block;
+  margin: 0 1px;
+  width: 50px;
+  height: 25px;
+  text-align: center;
+}
+
+.redes-container ul li a{
+  display: block;
+  padding: 0 10px;
+  background: #333;
+  color: #fff;
+  line-height: 35px;
+  font-size: 25px;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .2);
+  transition: 0.3s;
+}
+.redes-container ul:hover a{
+  filter: blur(2px);
+
+}
+
+.redes-container ul li a:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .4);
+  filter: none;
+}
+
+.redes-container ul li .facebook:hover{
+  background: var(--facebook);
+}
+.redes-container ul li .instagram:hover{
+  background: var(--instagram);
+}
+.redes-container ul li .twitter:hover{
+  background: var(--twitter);
+}
+
+
+.fx-block {
+  width: 50%;
+  border: 5px solid #262559;
+  background: #262559;
+  box-sizing: border-box;
+  box-shadow: 0 5px 5px 0 rgb(61, 56, 56);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  border-radius: 800px;
+  position: center; 
+  font-family: 'Times New Roman', Times, serif;
+}
+
+  /*Boton de encendido*/
+.toggle > div {
+  position: relative;
+  padding: 3px;
+  width: 150px;
+  height: 60px;
+  border-radius: 50px;
+  box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .5), 0px 1px 1px 0 rgba(255, 255, 255, 1);
+  background: #577ef2;
+  background: linear-gradient(to bottom, rgba(189, 191, 193, 1) 0%, rgba(249, 251, 254, 1) 100%);
+}
+
+.toggle > div > input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  top: -3px;
+  left: 17px;
+  width: 130px;
+  height: 55px;
+  z-index: 5;
+}
+
+.toggle > div > input[type=checkbox] ~ div {
+  width: 130px;
+  height: 55px;
+  border-radius: 50px;
+  border: 1px solid #979797;
+  box-shadow: inset 5px 0 0 0 rgba(0, 0, 0, .1), inset -5px 0 0 0 rgba(0, 0, 0, .1), inset -6px 0 0 0 rgba(255, 255, 255, .5), inset -4px 6px 11px -5px rgba(0, 0, 0, .2), inset 1px 1px 0 0 rgba(255, 255, 255, 1), -6px 4px 11px -7px rgba(0, 0, 0, .5);
+  background: rgb(253, 252, 251);
+  background: linear-gradient(to right, rgba(253, 252, 251, 1) 37%, rgba(229, 229, 229, 1) 61%);
+}
+
+.toggle > div > input[type=checkbox]:checked ~ div {
+  box-shadow: inset -5px 0 0 0 rgba(0, 0, 0, .1), inset 5px 0 0 0 rgba(0, 0, 0, .1), inset 6px 0 0 0 rgba(255, 255, 255, .5), inset -4px 6px 11px -5px rgba(0, 0, 0, .2), inset 1px 1px 0 0 rgba(255, 255, 255, 1), -6px 4px 11px -7px rgba(0, 0, 0, .5);
+  background: rgb(229, 229, 229);
+  background: linear-gradient(to right, rgba(229, 229, 229, 1) 39%, rgba(253, 252, 251, 1) 63%);
+}
+
+.toggle > div > input[type=checkbox] ~ div:before {
+  content: attr(data-unchecked);
+  display: block;
+  position: absolute;
+  border-radius: 10px;
+  top: 27px;
+  left: 30px;
+}
+
+.toggle > div > input[type=checkbox] ~ div:after {
+  content: attr(data-checked);
+  color: #df0000;
+  text-shadow: 0 1px 0 #fff, 0px 0 7px #df0000;
+  filter: dropshadow(color=#df0000, offx=0, offy=0);
+  display: block;
+  position: absolute;
+  border-radius: 10px;
+  top: 27px;
+  left: 100px;
+}
+
+.toggle > div > input[type=checkbox]:checked ~ div:before {
+  color: #119400;
+  text-shadow: 0 1px 0 #fff, 0px 0 7px #007a08;
+  filter: dropshadow(color=#007a08, offx=0, offy=0);
+}
+
+.toggle > div > input[type=checkbox]:checked ~ div:after {
+  color: #000;
+  text-shadow: none;
+  filter: dropshadow(none);
+}
+
+/*formulario */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: #262559;
+  padding: 20px;
+  border-radius: 10px;
+  position: static;
+  box-shadow: 0 5px 5px 0 rgb(61, 56, 56);
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form label {
+  position: relative;
+}
+
+/*Boton de inicio del temporizador*/
+.startchronometer {
+  margin: 6px;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(to bottom, #262559, #577ef2);
+ /* Gradient background */
+  color: white;
+ /* White text color */
+  font-family: "Segoe UI", sans-serif;
+ /* Stylish and legible font */
+  font-weight: bold;
+  font-size: 18px;
+ /* Large font size */
+  border: none;
+ /* No border */
+  border-radius: 30px;
+ /* Rounded corners */
+  padding: 14px 28px;
+ /* Large padding */
+  cursor: pointer;
+ /* Cursor on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ /* Subtle shadow */
+  animation: button-shimmer 2s infinite;
+  transition: all 0.3s ease-in-out;
+ /* Smooth transition */
+}
+
+/* Hover animation */
+.startchronometer:hover {
+  background: linear-gradient(to bottom, #2c2f63, #5b67b7);
+  animation: button-particles 1s ease-in-out infinite;
+  transform: translateY(-2px);
+}
+
+/* Click animation */
+.startchronometer:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Shimmer animation */
+@keyframes button-shimmer {
+  0% {
+    background-position: left top;
+  }
+
+  100% {
+    background-position: right bottom;
+  }
+}
+
+/* Particle animation */
+@keyframes button-particles {
+  0% {
+    background-position: left top;
+  }
+
+  100% {
+    background-position: right bottom;
+  }
+}
+
+
+/*Boton de enviar*/
+  .beautiful-button {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to bottom, #262559, #577ef2);
+   /* Gradient background */
+    color: white;
+   /* White text color */
+    font-family: "Segoe UI", sans-serif;
+   /* Stylish and legible font */
+    font-weight: bold;
+    font-size: 18px;
+   /* Large font size */
+    border: none;
+   /* No border */
+    border-radius: 30px;
+   /* Rounded corners */
+    padding: 14px 28px;
+   /* Large padding */
+    cursor: pointer;
+   /* Cursor on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+   /* Subtle shadow */
+    animation: button-shimmer 2s infinite;
+    transition: all 0.3s ease-in-out;
+   /* Smooth transition */
+  }
+  
+  /* Hover animation */
+  .beautiful-button:hover {
+    background: linear-gradient(to bottom, #2c2f63, #5b67b7);
+    animation: button-particles 1s ease-in-out infinite;
+    transform: translateY(-2px);
+  }
+  
+  /* Click animation */
+  .beautiful-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Shimmer animation */
+  @keyframes button-shimmer {
+    0% {
+      background-position: left top;
+    }
+  
+    100% {
+      background-position: right bottom;
+    }
+  }
+  
+  /* Particle animation */
+  @keyframes button-particles {
+    0% {
+      background-position: left top;
+    }
+  
+    100% {
+      background-position: right bottom;
+    }
+  }
+
+
+  /*Boton de limpiar*/
+
+  .reset-button {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to bottom, #5e0002, #91190f);
+   /* Gradient background */
+    color: white;
+   /* White text color */
+    font-family: "Segoe UI", sans-serif;
+   /* Stylish and legible font */
+    font-weight: bold;
+    font-size: 18px;
+   /* Large font size */
+    border: none;
+   /* No border */
+    border-radius: 30px;
+   /* Rounded corners */
+    padding: 14px 28px;
+   /* Large padding */
+    cursor: pointer;
+   /* Cursor on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+   /* Subtle shadow */
+    animation: button-shimmer 2s infinite;
+    transition: all 0.3s ease-in-out;
+   /* Smooth transition */
+  }
+  
+  /* Hover animation */
+  .reset-button :hover {
+    background: linear-gradient(to bottom, #5e0002, #91190f);
+    animation: button-particles 1s ease-in-out infinite;
+    transform: translateY(-2px);
+  }
+  
+  /* Click animation */
+  .reset-button :active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Shimmer animation */
+  @keyframes button-shimmer {
+    0% {
+      background-position: left top;
+    }
+  
+    100% {
+      background-position: right bottom;
+    }
+  }
+  
+  /* Particle animation */
+  @keyframes button-particles {
+    0% {
+      background-position: left top;
+    }
+  
+    100% {
+      background-position: right bottom;
+    }
+  }
+
+/* Tabla */
+.tabla-registros {
+  border:3px doble #e8e8e8;
+  border-spacing:4px;
+  padding:6px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.tabla-registros caption {
+  caption-side:arriba;
+  text-align:centrar;
+  font-family: 'Times New Roman', Times, serif;
+}
+.tabla-registros th {
+  border:3px doble #e8e8e8;
+  padding:6px;
+  background:#262559;
+  font-family: 'Times New Roman', Times, serif;
+}
+.tabla-registros td {
+  border:3px doble #e8e8e8;
+  text-align:centrar;
+  padding:6px;
+  background:#2f2abf;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+footer{
+  display: flex;
+  min-height: 25px;
+  background: #312bd9;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 4px 5px 8px rgb(61, 56, 56);
+  font-family: 'Times New Roman', Times, serif;
+}
